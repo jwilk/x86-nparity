@@ -1,4 +1,3 @@
-#include <stdbool.h>
 #include <stdio.h>
 
 static inline unsigned int nparity(unsigned int x)
