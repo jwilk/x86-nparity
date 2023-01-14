@@ -22,7 +22,7 @@ static inline unsigned int nparity(unsigned char x)
 int main(void)
 {
     unsigned int i;
-    for (i = 0; i < 64; i++) {
+    for (i = 0; i <= 0xFF; i++) {
         int v = 0;
         for (int b = 0; b < 8; b++)
             v ^= !!(i & (1U << b));
