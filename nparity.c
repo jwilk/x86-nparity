@@ -1,3 +1,7 @@
+/* Copyright © 2005-2023 Jakub Wilk <jwilk@jwilk.net>
+ * SPDX-License-Identifier: MIT
+ */
+
 #include <stdio.h>
 
 static inline unsigned int nparity(unsigned int x)
