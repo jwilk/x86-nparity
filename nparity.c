@@ -9,6 +9,7 @@ static inline unsigned int nparity(unsigned int x)
         "setnp %b0\n"
         : "=r" (_v)
         : "r" (x)
+        : "cc"
     );
     return _v;
 }
