@@ -3,8 +3,9 @@
  */
 
 #include <assert.h>
+#include <stdbool.h>
 
-static inline unsigned int nparity(unsigned char x)
+static inline bool nparity(unsigned char x)
 {
     register unsigned int xi = x;
     register unsigned int v;
@@ -23,7 +24,7 @@ int main(void)
 {
     unsigned int i;
     for (i = 0; i <= 0xFF; i++) {
-        int v = 0;
+        bool v = 0;
         for (int b = 0; b < 8; b++)
             v ^= !!(i & (1U << b));
         assert(v == nparity(i));
