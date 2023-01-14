@@ -1,4 +1,5 @@
 #include <stdbool.h>
+#include <stdio.h>
 
 inline unsigned int nparity(unsigned int x)
 {
