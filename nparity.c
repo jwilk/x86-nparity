@@ -14,4 +14,4 @@ int main(void)
     printf("%cparity(%02d)\n", nparity(i)?'n':' ', i);
 }
 
-// vim:ts=2 sw=2 et
+// vim:set ts=2 sts=2 sw=2 et:
