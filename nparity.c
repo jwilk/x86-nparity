@@ -2,7 +2,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include <stdio.h>
+#include <assert.h>
 
 static inline unsigned int nparity(unsigned char x)
 {
@@ -22,8 +22,12 @@ static inline unsigned int nparity(unsigned char x)
 int main(void)
 {
     unsigned int i;
-    for (i = 0; i < 64; i++)
-        printf("%cparity(%02d)\n", nparity(i) ? 'n' : ' ', i);
+    for (i = 0; i < 64; i++) {
+        int v = 0;
+        for (int b = 0; b < 8; b++)
+            v ^= !!(i & (1U << b));
+        assert(v == nparity(i));
+    }
 }
 
 // vim:set ts=4 sts=4 sw=4 et:
