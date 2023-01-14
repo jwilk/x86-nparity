@@ -6,16 +6,16 @@
 
 static inline unsigned int nparity(unsigned int x)
 {
-    register unsigned int _v;
+    register unsigned int v;
     __asm__(
         "or %1, %1\n"
         "mov $0, %0\n"
         "setnp %b0\n"
-        : "=r" (_v)
+        : "=r" (v)
         : "r" (x)
         : "cc"
     );
-    return _v;
+    return v;
 }
 
 int main(void)
